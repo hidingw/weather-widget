@@ -1,0 +1,63 @@
+@import "weather-icons.min.css";
+@import "weather-icons-wind.min.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  font-size: 12px;
+  height: 100%;
+}
+body {
+  background-image:
+          url("http://zellox.com/wp-content/uploads/2016/05/website-backgrounds-%E2%80%AB1%E2%80%AC-%E2%80%AB%E2%80%AC.jpg");
+  background-size: cover;
+}
+.container{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(93, 137, 186, 1);
+  h2 {
+    font-size: 3.5rem;
+    font-family: "Lobster", cursive;
+
+  }
+  .weather-info{
+    width: 30%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+      p{
+        padding: 0.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+      }
+      .title {text-align: right;}
+      .info{
+        p:not(:last-child){
+          i{
+            font-size: 2rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  .current-weather{
+    background-size: cover;
+    background-color: rgba(255,255,255, 0.3);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    .wi{
+      font-size: 3rem;
+    }
+  }
+  }
