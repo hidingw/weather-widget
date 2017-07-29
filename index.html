@@ -9,26 +9,26 @@
       crossorigin="anonymous"></script>
     <script src="script/script.js"></script>
     <link rel="stylesheet" href="src/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lobster|Exo+2" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-    <h2 class="city"></h2>
-    <div class="current-weather"><i id="currentWeatherIcon" class="wi"></i></div>
+    <div class="main-info">
+        <h2 class="city"></h2>
+        <p class="date"></p>
+    </div>
+    <div class="current-weather"><i class="wi"></i></div>
     <div class="weather-info">
         <div class="title">
             <p class="title--currentT">Current temp:</p>
-            <p class="title--maxT">Max day temp:</p>
-            <p class="title--minT">Min day temp:</p>
             <p class="title--wind">Wind:</p>
         </div>
         <div class="info">
             <p class="info--currentT"><i class="wi"></i></p>
-            <p class="info--maxT"><i class="wi"></i></p>
-            <p class="info--minT"><i class="wi"></i></p>
             <p class="info--wind"><i class="wi wi-strong-wind"></i></p>
         </div>
     </div>
+    <button id="getFiveDayWeather">Get weather on 5 days</button>
 </div>
 </body>
 </html>
