@@ -1,34 +1,77 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Simple weather widget</title>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-    <script src="script/script.js"></script>
-    <link rel="stylesheet" href="src/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lobster|Exo+2" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>My Simple weather widget</title>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="script/script.js"></script>
+  <script src="https://use.fontawesome.com/d8d22f3f6e.js"></script>
+  <link rel="stylesheet" href="src/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Abril+Fatface|Exo+2" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-    <div class="main-info">
-        <h2 class="city"></h2>
-        <p class="date"></p>
-    </div>
+  <div class="main-info">
+    <h2 class="city"></h2>
+    <p class="current-date"></p>
+  </div>
+  <div class="weather-main">
     <div class="current-weather"><span></span><i class="wi"></i></div>
     <div class="weather-info">
-        <div class="title">
-            <p class="title--currentT">Current temp:</p>
-            <p class="title--wind">Wind:</p>
-        </div>
-        <div class="info">
-            <p class="info--currentT"><span></span><i class="wi"></i></p>
-            <p class="info--wind"><span></span><i class="wi wi-strong-wind"></i></p>
-        </div>
+      <div class="title">
+        <p class="title--currentT">Current temp:</p>
+        <p class="title--wind">Wind:</p>
+      </div>
+      <div class="info">
+        <p class="info--currentT"><span></span><i id="temp" class="wi"></i></p>
+        <p class="info--wind"><span></span><i class="wi wi-strong-wind"></i></p>
+      </div>
     </div>
-    <button id="getFiveDayWeather">Get weather on 5 days</button>
+    <button class="change-view" id="getFiveDayWeather">Get weather on 5 days</button>
+  </div>
+  <div class="weather-5days-info">
+    <div class="nav-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+    <div class="three-hours-weather block-0">
+        <p class="date">Date: <span></span></p>
+        <p class="time">Time: <span></span></p>
+        <p class="weather">Weather: <span></span><i class="wi"></i></p>
+        <p class="temp">Temp: <span></span><i class="wi"></i></p>
+        <p class="wind">Wind: <span></span><i class="wi wi-strong-wind"></i></p>
+    </div>
+    <div class="three-hours-weather block-1">
+      <p class="date">Date: <span></span></p>
+      <p class="time">Time: <span></span></p>
+      <p class="weather">Weather: <span></span><i class="wi"></i></p>
+      <p class="temp">Temp: <span></span><i class="wi"></i></p>
+      <p class="wind">Wind: <span></span><i class="wi wi-strong-wind"></i></p>
+    </div>
+    <div class="three-hours-weather block-2">
+    <p class="date">Date: <span></span></p>
+    <p class="time">Time: <span></span></p>
+    <p class="weather">Weather: <span></span><i class="wi"></i></p>
+    <p class="temp">Temp: <span></span><i class="wi"></i></p>
+    <p class="wind">Wind: <span></span><i class="wi wi-strong-wind"></i></p>
+  </div>
+    <div class="three-hours-weather block-3">
+    <p class="date">Date: <span></span></p>
+    <p class="time">Time: <span></span></p>
+    <p class="weather">Weather: <span></span><i class="wi"></i></p>
+    <p class="temp">Temp: <span></span><i class="wi"></i></p>
+    <p class="wind">Wind: <span></span><i class="wi wi-strong-wind"></i></p>
+  </div>
+    <div class="three-hours-weather block-4">
+    <p class="date">Date: <span></span></p>
+    <p class="time">Time: <span></span></p>
+    <p class="weather">Weather: <span></span><i class="wi"></i></p>
+    <p class="temp">Temp: <span></span><i class="wi"></i></p>
+    <p class="wind">Wind: <span></span><i class="wi wi-strong-wind"></i></p>
+  </div>
+    <div class="nav-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+  </div>
+  <button class="change-view" id="getCurrentWeather">Get weather on current day</button>
 </div>
 </body>
 </html>

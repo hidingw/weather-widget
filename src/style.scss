@@ -1,5 +1,6 @@
 @import "weather-icons.min.css";
 @import "weather-icons-wind.min.css";
+$main-color: rgba(93, 137, 186, 1);
 
 * {
   padding: 0;
@@ -28,27 +29,33 @@ body {
     margin-bottom: 7rem;
     h2 {
       font-size: 3.5rem;
-      font-family: "Lobster", cursive;
+      font-family: "Abril Fatface", cursive;
+      font-weight: 500;
     }
-    .date{
+    .current-date{
       font-family: "Exo 2", sans-serif;
       font-size: 2rem;
       font-weight: 500;
     }
   }
-  .weather-info{
+  .weather-main{
     width: 20%;
     font-size: 2rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    .weather-info{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
       p{
         padding: 0.5rem;
         font-family: 'Josefin Sans', sans-serif;
         font-weight: bold;
       }
-      .title {text-align: right;}
       .info{
+        display: block;
         p:not(:last-child){
           i{
             font-size: 2rem;
@@ -57,30 +64,64 @@ body {
         }
       }
     }
-  .current-weather{
-    background-size: cover;
-    background-color: rgba(255,255,255, 0.3);
-    border-radius: 50%;
-    margin-bottom: 10px;
-    span{
-      font-family: 'Josefin Sans', sans-serif;
-      font-weight: 800;
-      font-size: 2rem;
-      margin-right: 1rem;
-    }
-    .wi{
-      font-size: 3rem;
+    .current-weather{
+      background-size: cover;
+      background-color: rgba(255,255,255, 0.3);
+      border-radius: 50%;
+      margin-bottom: 10px;
+      span{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 800;
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+      .wi{
+        font-size: 3rem;
+      }
     }
   }
-  #getFiveDayWeather{
+  .weather-5days-info{
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    .three-hours-weather{
+      width: 15%;
+      background-color: rgba(179, 177, 179, 0.15);
+      border-radius: 1rem;
+      font-size: 1.5rem;
+      p{
+        padding: 0.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+      }
+      .temp{
+        i{
+          cursor: pointer;
+        }
+      }
+    }
+    .nav-btn{
+      .fa{
+        font-size: 3rem;
+        color: $main-color;
+      }
+    }
+  }
+  .change-view {
     margin-top: 2rem;
     border: none;
     color: #fff;
-    background-color: #5d89ba;
-    font-family: "Lobster", cursive;
+    background-color: $main-color;
+    font-family: "Abril Fatface", cursive;
     font-weight: lighter;
     font-size: 2rem;
     padding: 1rem;
     border-radius: 20px;
+    transition: 0.4s;
+  }
+  #getCurrentWeather {
+
+    display: none;
   }
   }
